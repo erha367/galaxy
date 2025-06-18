@@ -8,7 +8,15 @@ type Response {
 	Message string `json:"message"`
 }
 
+//接口通用返回
+type CommonRes {
+	Code int         `json:"code"`
+	Msg  string      `json:"msg"`
+	Data interface{} `json:"data"`
+}
+
 service galaxy-api {
 	@handler GalaxyHandler
-	get /from/:name(Request) returns (Response)
+	get /from/:name (Request) returns (CommonRes)
 }
+

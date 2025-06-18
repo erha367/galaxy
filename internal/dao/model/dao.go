@@ -5,8 +5,6 @@
 package model
 
 import (
-	"context"
-	"galaxy/internal/svc"
 	"time"
 )
 
@@ -30,10 +28,4 @@ type Notice struct {
 // TableName Notice's table name
 func (*Notice) TableName() string {
 	return TableNameNotice
-}
-
-func GetAllNotice(ctx context.Context,svCtx *svc.ServiceContext)([]Notice,error){
-	var res []Notice
-	err := svCtx.DB.WithContext(ctx).Where("id > ?",0).Find(&res).Error
-	return res, err
 }
