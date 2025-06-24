@@ -2,7 +2,7 @@ package logic
 
 import (
 	"context"
-	"galaxy/internal/dao/query"
+	"galaxy/dao/query"
 	"galaxy/internal/svc"
 	"galaxy/internal/types"
 
@@ -25,7 +25,7 @@ func NewGalaxyLogic(ctx context.Context, svcCtx *svc.ServiceContext) *GalaxyLogi
 
 func (l *GalaxyLogic) Galaxy(req *types.Request) (resp *types.CommonRes, err error) {
 	// todo: add your logic here and delete this line
-	data, err := query.GetAllNotice(l.ctx, l.svcCtx)
+	data, err := query.GetAllCate(l.ctx, l.svcCtx)
 	if err != nil {
 		return
 	}

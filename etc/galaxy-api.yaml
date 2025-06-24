@@ -3,6 +3,7 @@ Host: 0.0.0.0
 Port: 8080
 Environment: prod
 MaxConns: 20000
+Sqlite: /Users/yangsen13/waibao/galaxy/yshop.db
 #日志
 Log:
   Mode: file

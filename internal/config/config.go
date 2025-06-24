@@ -8,4 +8,5 @@ type Config struct {
 	Mysql       struct {
 		DataSource string
 	}
+	Sqlite string `json:"Sqlite"`
 }
